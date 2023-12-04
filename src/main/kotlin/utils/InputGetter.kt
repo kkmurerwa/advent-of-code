@@ -4,9 +4,9 @@ import java.io.File
 import java.io.InputStream
 
 object InputGetter {
-    fun getFileInput(day: Int, year: Int): List<String> {
+    fun getFileInput(day: Int, year: Int, fileName: String = "input"): List<String> {
         val path = System.getProperty("user.dir")
-        val fileNamePath = "$path/src/main/kotlin/year$year/day$day/input.txt"
+        val fileNamePath = "$path/src/main/kotlin/year$year/day$day/$fileName.txt"
 
         val inputStream: InputStream = File(fileNamePath).inputStream()
 
