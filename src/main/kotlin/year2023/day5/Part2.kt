@@ -4,9 +4,7 @@ import utils.InputGetter
 import kotlin.collections.HashMap
 
 fun main() {
-    val inputArr = InputGetter.getFileInput(5, 2023)
-
-    val processedPair = processDay5Part2Input(inputArr)
+    val processedPair = processDay5Part2Input()
 
     val seeds = processedPair.first
     var min = Long.MAX_VALUE
@@ -21,8 +19,8 @@ fun main() {
     println("Min: $min")
 }
 
-fun processDay5Part2Input(inputArr: List<String>): Pair<List<Pair<Long, Long>>, HashMap<String, MutableList<List<Long>>>> {
-    val filtered = inputArr.filter { s -> s.isNotEmpty() }
+fun processDay5Part2Input(): Pair<List<Pair<Long, Long>>, HashMap<String, MutableList<List<Long>>>> {
+    val filtered = InputGetter.getFileInput(5, 2023).filter { s -> s.isNotEmpty() }
 
     val seeds: MutableList<Pair<Long, Long>> = mutableListOf()
     var key = ""
