@@ -12,6 +12,6 @@ object InputGetter {
 
         val inputString = inputStream.bufferedReader().use { it.readText() }
 
-        return inputString.split("\n").filter { it.isEmpty() }
+        return inputString.split("\n").filter { it.isNotEmpty() }
     }
 }
